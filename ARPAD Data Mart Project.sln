@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ARPAD Data Mart Project", "ARPAD Data Mart Project\ARPAD Data Mart Project.dtproj", "{10EED2D1-11E1-4BB0-A881-058A1AED0CFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10EED2D1-11E1-4BB0-A881-058A1AED0CFB}.Development|Default.ActiveCfg = Development
+		{10EED2D1-11E1-4BB0-A881-058A1AED0CFB}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2441208D-B689-4629-94F2-E7D1C8F8CC86}
+	EndGlobalSection
+EndGlobal

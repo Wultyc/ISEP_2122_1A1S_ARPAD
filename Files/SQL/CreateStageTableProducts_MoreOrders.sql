@@ -15,6 +15,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Products_MoreOrders')
 	[BoxLength] [float] NULL,
 	[BoxWidth] [float] NULL,
 	[BoxVolWeight] [float] NULL,
-	[Location] [nvarchar](255) NULL,
+	[Location] [nvarchar](255) NULL
 	)
 TRUNCATE TABLE Products_MoreOrders  

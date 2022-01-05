@@ -18,6 +18,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_PlusOrders')
 	[Phone] [bigint] NULL,
 	[PickupHour] [int] NULL,
 	[DailyPickup] [bit] NULL,
-	[TimeZone] [nvarchar](255) NULL,
+	[TimeZone] [nvarchar](255) NULL
 	)
 TRUNCATE TABLE Site_PlusOrders  

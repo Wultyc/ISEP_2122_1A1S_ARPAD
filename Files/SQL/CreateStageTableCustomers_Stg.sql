@@ -1,5 +1,5 @@
-IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Customers_MoreOrders')
-	CREATE TABLE [dbo].[Customers_MoreOrders]
+IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Customers_Stg')
+	CREATE TABLE [dbo].[Customers_Stg]
 	(
 		[CustomerID] [int] NOT NULL,
 		[CountryID] [int] NULL,
@@ -7,6 +7,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Customers_MoreOrders')
 		[Gender] [nchar](1) NULL,
 		[GeographicRegion] [int] NULL,
 		[Language] [nvarchar](2) NULL,
-		[VipCustomer] [bit] NULL
+		[VipCustomer] [bit] NULL,
+        [SystemID] [INT] NULL
 	)
-TRUNCATE TABLE Customers_MoreOrders  
+TRUNCATE TABLE Customers_Stg

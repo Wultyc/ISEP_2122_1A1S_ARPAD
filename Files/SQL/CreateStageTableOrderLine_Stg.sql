@@ -1,8 +1,8 @@
-IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'OrderLine_PlusOrders')
-	CREATE TABLE [dbo].[OrderLine_PlusOrders]
+IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'OrderLine_Stg')
+	CREATE TABLE [dbo].[OrderLine_Stg]
 	(
 	[OrderLineID] [int] NOT NULL,
-    [OrderLineDetailsID] NULL,
+    [OrderLineDetailsID] [int] NULL,
 	[OrderID] [int] NULL,
 	[ProductID] [int] NULL,
 	[Quantity] [int] NULL,
@@ -13,6 +13,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'OrderLine_PlusOrders')
 	[Currency] [nvarchar](3) NULL,
 	[SalePercentage] [int] NULL,
 	[Discount] [money] NULL,
-	[PromotionDiscount] [money] NULL
+	[PromotionDiscount] [money] NULL,
+    [SystemID] [int] NULL
 	)
-TRUNCATE TABLE OrderLine_PlusOrders    
+TRUNCATE TABLE OrderLine_Stg    

@@ -42,8 +42,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Sizes_PlusOrders')
 	[FriendlyName] [nvarchar](255) NULL,
 	[RetailInvisible] [bit] NULL,
 	[MinimunSizeAvailable] [int] NULL,
-	[MaximunSizeAvailable] [int] NULL,
-	[CreateDate] [date] NULL,
-	[LastUpdateDate] [date] NULL
+	[MaximunSizeAvailable] [int] NULL
 	)
 TRUNCATE TABLE Sizes_PlusOrders  

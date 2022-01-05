@@ -1,5 +1,5 @@
-IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_MoreOrders')
-	CREATE TABLE [dbo].[Site_MoreOrders]
+IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_Stg')
+	CREATE TABLE [dbo].[Site_Stg]
 	(
 	[SiteID] [int] NOT NULL,
 	[Name] [nvarchar](255) NULL,
@@ -18,6 +18,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_MoreOrders')
 	[Phone] [bigint] NULL,
 	[PickupHour] [int] NULL,
 	[DailyPickup] [bit] NULL,
-	[TimeZone] [nvarchar](255) NULL
+	[TimeZone] [nvarchar](255) NULL,
+    [SystemID] [int] NULL
 	)
-TRUNCATE TABLE Site_MoreOrders  
+TRUNCATE TABLE Site_Stg  

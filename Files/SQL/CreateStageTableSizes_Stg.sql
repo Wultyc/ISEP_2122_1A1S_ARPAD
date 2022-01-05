@@ -1,5 +1,5 @@
-IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Sizes_MoreOrders')
-	CREATE TABLE [dbo].[Sizes_MoreOrders]
+IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Sizes_Stg')
+	CREATE TABLE [dbo].[Sizes_Stg]
 	(
 	[SizeID] [int] NOT NULL,
 	[Name] [nvarchar](255) NULL,
@@ -31,8 +31,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Sizes_MoreOrders')
 	[42] [nvarchar](255) NULL,
 	[43] [nvarchar](255) NULL,
 	[44] [nvarchar](255) NULL,
-	[45] [nvarchar](255) NULL,
-	[46] [nvarchar](255) NULL,
+	[45] [nvarchar](255) NULL,	[46] [nvarchar](255) NULL,
 	[47] [nvarchar](255) NULL,
 	[48] [nvarchar](255) NULL,
 	[49] [nvarchar](255) NULL,
@@ -44,4 +43,4 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Sizes_MoreOrders')
 	[MinimunSizeAvailable] [int] NULL,
 	[MaximunSizeAvailable] [int] NULL
 	)
-TRUNCATE TABLE Sizes_MoreOrders  
+TRUNCATE TABLE Sizes_Stg 

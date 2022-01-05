@@ -1,5 +1,5 @@
-IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Products_PlusOrders')
-	CREATE TABLE [dbo].[Products_PlusOrders]
+IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Products_Stg')
+	CREATE TABLE [dbo].[Products_Stg]
 	(
 	[ProductID] [int] NOT NULL,
 	[Description] [nvarchar](255) NULL,
@@ -15,6 +15,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Products_PlusOrders')
 	[BoxLength] [float] NULL,
 	[BoxWidth] [float] NULL,
 	[BoxVolWeight] [float] NULL,
-	[Location] [nvarchar](255) NULL
+	[Location] [nvarchar](255) NULL,
+    [SystemID] [int] NULL
 	)
-TRUNCATE TABLE Products_PlusOrders  
+TRUNCATE TABLE Products_Stg  

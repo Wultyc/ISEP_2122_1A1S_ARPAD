@@ -7,6 +7,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Customers_MoreOrders')
 		[Gender] [nchar](1) NULL,
 		[GeographicRegion] [int] NULL,
 		[Language] [nvarchar](2) NULL,
-		[VipCustomer] [bit] NULL
+		[VipCustomer] [bit] NULL,
+		[CreateDate] [date] NULL
 	)
 TRUNCATE TABLE Customers_MoreOrders  

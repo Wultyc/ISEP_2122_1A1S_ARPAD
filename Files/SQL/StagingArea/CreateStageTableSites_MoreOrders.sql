@@ -9,7 +9,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_MoreOrders')
 	[Initials] [nvarchar](3) NULL,
 	[Currency] [nvarchar](3) NULL,
 	[SiteInfoID] [int] NULL,
-	[Name] [nvarchar](255) NULL,
 	[StoreContact] [nvarchar](255) NULL,
 	[AddressLine1] [nvarchar](255) NULL,
 	[AddressLine2] [nvarchar](255) NULL,

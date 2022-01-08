@@ -2,7 +2,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'OrderLine_PlusOrders')
 	CREATE TABLE [dbo].[OrderLine_PlusOrders]
 	(
 	[OrderLineID] [int] NOT NULL,
-    [OrderLineDetailsID] NULL,
+    [OrderLineDetailsID] [int]NULL,
 	[OrderID] [int] NULL,
 	[ProductID] [int] NULL,
 	[Quantity] [int] NULL,

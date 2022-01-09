@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{83C8445B-28BB-4EBC-B4B4-3E8D663D9CC9}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{E0B88CF4-3152-41F6-8AAA-6B5D60CC8066}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -380,6 +380,176 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Category_PlusOrders"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Categories]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PlusOrders]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PlusOrders]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                          name="CategoryID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Name]"
+                          name="Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Gender]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                          length="1"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Gender]"
+                          name="Gender"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CreateDate]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]"
+                          name="CreateDate"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                          dataType="i4"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
+                          dataType="wstr"
+                          length="1"
+                          name="Gender" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CreateDate]"
+                          dataType="dbDate"
+                          name="CreateDate" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[LastUpdateDate]"
+                          dataType="dbDate"
+                          name="LastUpdateDate" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                          name="CategoryID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Name]"
+                          name="Name" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                          dataType="wstr"
+                          length="1"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Gender]"
+                          name="Gender" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CreateDate]"
+                          dataType="dbDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CreateDate]"
+                          name="CreateDate" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Load Staging Area\Load Staging Area\Conditional Split"
                   componentClassID="Microsoft.ConditionalSplit"
                   contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -461,6 +631,95 @@
                           refId="Package\Load Staging Area\Load Staging Area\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Load Staging Area\Load Staging Area\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Conditional Split 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Inputs[Conditional Split Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Null]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Null"
+                      synchronousInputId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">[ISNULL](#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(CategoryID)</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Conditional Split Default Output]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Conditional Split Default Output"
+                      synchronousInputId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -1528,6 +1787,103 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Load Staging Area\Load Staging Area\Derived Column 1"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output].Columns[CategoryName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="7"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output].Columns[CategoryName]"
+                          name="CategoryName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">"Unknown"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">"Unknown"</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output].Columns[CategoryGender]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="1"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output].Columns[CategoryGender]"
+                          name="CategoryGender"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">"U"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">"U"</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Load Staging Area\Load Staging Area\Merge Join"
                   componentClassID="Microsoft.MergeJoin"
                   contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -1884,6 +2240,370 @@
                               dataType="System.Int32"
                               description="The input column associated with this output column"
                               name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join.Inputs[Merge Join Right Input].Columns[Location]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Load Staging Area\Merge Join 1"
+                  componentClassID="Microsoft.MergeJoin"
+                  contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+                  name="Merge Join 1"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of join to perform."
+                      name="JoinType"
+                      typeConverter="JoinType">2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of columns in the ordering key."
+                      name="NumKeyColumns">1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the null values are treated as equal values."
+                      name="TreatNullsAsEqual">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Indicates the requested maximum buffers per input before blocking."
+                      name="MaxBuffersPerInput">5</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Left Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[ProductID]"
+                          cachedDataType="i4"
+                          cachedName="ProductID"
+                          cachedSortKeyPosition="2"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[ProductID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[CategoryID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[Description]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Description"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Description]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[Color]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Color"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Color]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[AvailablePortal]"
+                          cachedDataType="bool"
+                          cachedName="AvailablePortal"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[AvailablePortal]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxID]"
+                          cachedDataType="i4"
+                          cachedName="BoxID"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="BoxName"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxName]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxHeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxHeight"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxHeight]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxLength]"
+                          cachedDataType="r8"
+                          cachedName="BoxLength"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxLength]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxWidth]"
+                          cachedDataType="r8"
+                          cachedName="BoxWidth"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxWidth]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxVolWeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxVolWeight"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxVolWeight]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxLocation]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="BoxLocation"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxLocation]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[Active]"
+                          cachedDataType="bool"
+                          cachedName="Active"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Active]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[CreateDate]"
+                          cachedDataType="dbDate"
+                          cachedName="CreateDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[CreateDate]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Right Input]"
+                      hasSideEffects="true"
+                      name="Merge Join Right Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Right Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          cachedSortKeyPosition="1"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[CategoryID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Right Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Name"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[Name]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Right Input].Columns[Gender]"
+                          cachedDataType="wstr"
+                          cachedLength="1"
+                          cachedName="Gender"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[Gender]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output]"
+                      isSorted="true"
+                      name="Merge Join Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[ProductID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[ProductID]"
+                          name="ProductID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[ProductID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Description]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Description]"
+                          name="Description">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[Description]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Color]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Color]"
+                          name="Color">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[Color]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[CategoryID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[CategoryID]"
+                          name="CategoryID"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[CategoryID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[AvailablePortal]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[AvailablePortal]"
+                          name="AvailablePortal">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[AvailablePortal]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxID]"
+                          name="BoxID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxName]"
+                          name="BoxName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxName]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxHeight]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxHeight]"
+                          name="BoxHeight">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxHeight]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxLength]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxLength]"
+                          name="BoxLength">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxLength]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxWidth]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxWidth]"
+                          name="BoxWidth">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxWidth]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxVolWeight]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxVolWeight]"
+                          name="BoxVolWeight">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxVolWeight]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxLocation]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxLocation]"
+                          name="BoxLocation">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[BoxLocation]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Active]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Active]"
+                          name="Active">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[Active]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[CreateDate]"
+                          dataType="dbDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[CreateDate]"
+                          name="CreateDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input].Columns[CreateDate]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Name]"
+                          name="Name">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Right Input].Columns[Name]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Gender]"
+                          dataType="wstr"
+                          length="1"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Gender]"
+                          name="Gender">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="The input column associated with this output column"
+                              name="InputColumnID">#{Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Right Input].Columns[Gender]}</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -4674,6 +5394,872 @@
                   </outputs>
                 </component>
                 <component
+                  refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Products_PlusOrders"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Products]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.PlusOrders]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.PlusOrders]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[ProductID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[ProductID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[ProductID]"
+                          name="ProductID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Description]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Description]"
+                          name="Description"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Color]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Color]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Color]"
+                          name="Color"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                          name="CategoryID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[AvailablePortal]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[AvailablePortal]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[AvailablePortal]"
+                          name="AvailablePortal"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxID]"
+                          name="BoxID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxName]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxName]"
+                          name="BoxName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxHeight]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxHeight]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxHeight]"
+                          name="BoxHeight"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLength]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxLength]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLength]"
+                          name="BoxLength"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxWidth]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxWidth]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxWidth]"
+                          name="BoxWidth"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxVolWeight]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxVolWeight]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxVolWeight]"
+                          name="BoxVolWeight"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLocation]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxLocation]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLocation]"
+                          name="BoxLocation"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Active]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Active]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Active]"
+                          name="Active"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CreateDate]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]"
+                          name="CreateDate"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                          dataType="wstr"
+                          length="255"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Color]"
+                          dataType="wstr"
+                          length="255"
+                          name="Color" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                          dataType="i4"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[AvailablePortal]"
+                          dataType="bool"
+                          name="AvailablePortal" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxID]"
+                          dataType="i4"
+                          name="BoxID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxName]"
+                          dataType="wstr"
+                          length="255"
+                          name="BoxName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxHeight]"
+                          dataType="r8"
+                          name="BoxHeight" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxLength]"
+                          dataType="r8"
+                          name="BoxLength" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxWidth]"
+                          dataType="r8"
+                          name="BoxWidth" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxVolWeight]"
+                          dataType="r8"
+                          name="BoxVolWeight" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[BoxLocation]"
+                          dataType="wstr"
+                          length="255"
+                          name="BoxLocation" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[Active]"
+                          dataType="bool"
+                          name="Active" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[CreateDate]"
+                          dataType="dbDate"
+                          name="CreateDate" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].ExternalColumns[LastUpdateDate]"
+                          dataType="dbDate"
+                          name="LastUpdateDate" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ProductID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ProductID]"
+                          name="ProductID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Description]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Description]"
+                          name="Description" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Color]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Color]"
+                          name="Color" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                          name="CategoryID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[AvailablePortal]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[AvailablePortal]"
+                          name="AvailablePortal" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxID]"
+                          name="BoxID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxName]"
+                          name="BoxName" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxHeight]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxHeight]"
+                          name="BoxHeight" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxLength]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxLength]"
+                          name="BoxLength" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxWidth]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxWidth]"
+                          name="BoxWidth" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxVolWeight]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxVolWeight]"
+                          name="BoxVolWeight" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxLocation]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[BoxLocation]"
+                          name="BoxLocation" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Active]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[Active]"
+                          name="Active" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CreateDate]"
+                          dataType="dbDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[CreateDate]"
+                          name="CreateDate" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Products_PlusOrders Staging Table"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Products_PlusOrders]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">true</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                          cachedDataType="i4"
+                          cachedName="ProductID"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[ProductID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[Description]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Description"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Description]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[Color]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Color"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Color]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          cachedSortKeyPosition="1"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[CategoryID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[AvailablePortal]"
+                          cachedDataType="bool"
+                          cachedName="AvailablePortal"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[AvailablePortal]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[AvailablePortal]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[BoxID]"
+                          cachedDataType="i4"
+                          cachedName="BoxID"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[BoxName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="BoxName"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxName]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxName]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[BoxHeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxHeight"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxHeight]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxHeight]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[BoxLength]"
+                          cachedDataType="r8"
+                          cachedName="BoxLength"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxLength]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxLength]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[BoxWidth]"
+                          cachedDataType="r8"
+                          cachedName="BoxWidth"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxWidth]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxWidth]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[BoxVolWeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxVolWeight"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxVolWeight]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[BoxVolWeight]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].Columns[Active]"
+                          cachedDataType="bool"
+                          cachedName="Active"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output].Columns[Active]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          dataType="wstr"
+                          length="255"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                          dataType="wstr"
+                          length="255"
+                          name="Color" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          dataType="i4"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
+                          dataType="wstr"
+                          length="255"
+                          name="CategoryName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[CategoryGender]"
+                          dataType="wstr"
+                          length="1"
+                          name="CategoryGender" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[AvailablePortal]"
+                          dataType="bool"
+                          name="AvailablePortal" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                          dataType="bool"
+                          name="Active" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxID]"
+                          dataType="i4"
+                          name="BoxID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxName]"
+                          dataType="wstr"
+                          length="255"
+                          name="BoxName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxHeight]"
+                          dataType="r8"
+                          name="BoxHeight" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxLength]"
+                          dataType="r8"
+                          name="BoxLength" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxWidth]"
+                          dataType="r8"
+                          name="BoxWidth" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[BoxVolWeight]"
+                          dataType="r8"
+                          name="BoxVolWeight" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                          dataType="wstr"
+                          length="255"
+                          name="Location" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Products_PlusOrders Staging Table 1"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Products_PlusOrders]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">true</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                          cachedDataType="i4"
+                          cachedName="ProductID"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[ProductID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[Description]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Description"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Description]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[Color]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Color"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Color]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[AvailablePortal]"
+                          cachedDataType="bool"
+                          cachedName="AvailablePortal"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[AvailablePortal]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[AvailablePortal]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[BoxID]"
+                          cachedDataType="i4"
+                          cachedName="BoxID"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxID]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[BoxName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="BoxName"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxName]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxName]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[BoxHeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxHeight"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxHeight]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxHeight]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[BoxLength]"
+                          cachedDataType="r8"
+                          cachedName="BoxLength"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxLength]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLength]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[BoxWidth]"
+                          cachedDataType="r8"
+                          cachedName="BoxWidth"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxWidth]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxWidth]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[BoxVolWeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxVolWeight"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxVolWeight]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxVolWeight]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[Active]"
+                          cachedDataType="bool"
+                          cachedName="Active"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Active]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[CategoryName]"
+                          cachedDataType="wstr"
+                          cachedLength="7"
+                          cachedName="CategoryName"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output].Columns[CategoryName]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[CategoryGender]"
+                          cachedDataType="wstr"
+                          cachedLength="1"
+                          cachedName="CategoryGender"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryGender]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output].Columns[CategoryGender]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].Columns[BoxLocation]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="BoxLocation"
+                          externalMetadataColumnId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLocation]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                          dataType="i4"
+                          name="ProductID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                          dataType="wstr"
+                          length="255"
+                          name="Description" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Color]"
+                          dataType="wstr"
+                          length="255"
+                          name="Color" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryID]"
+                          dataType="i4"
+                          name="CategoryID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
+                          dataType="wstr"
+                          length="255"
+                          name="CategoryName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[CategoryGender]"
+                          dataType="wstr"
+                          length="1"
+                          name="CategoryGender" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[AvailablePortal]"
+                          dataType="bool"
+                          name="AvailablePortal" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Active]"
+                          dataType="bool"
+                          name="Active" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxID]"
+                          dataType="i4"
+                          name="BoxID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxName]"
+                          dataType="wstr"
+                          length="255"
+                          name="BoxName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxHeight]"
+                          dataType="r8"
+                          name="BoxHeight" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxLength]"
+                          dataType="r8"
+                          name="BoxLength" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxWidth]"
+                          dataType="r8"
+                          name="BoxWidth" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[BoxVolWeight]"
+                          dataType="r8"
+                          name="BoxVolWeight" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                          dataType="wstr"
+                          length="255"
+                          name="Location" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Load Staging Area\Load Staging Area\Sort"
                   componentClassID="Microsoft.Sort"
                   contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -6287,18 +7873,646 @@
                     </output>
                   </outputs>
                 </component>
+                <component
+                  refId="Package\Load Staging Area\Load Staging Area\Sort 6"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort 6"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[ProductID]"
+                          cachedDataType="i4"
+                          cachedName="ProductID"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[ProductID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">2</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[Description]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Description"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Description]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[Color]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Color"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Color]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[AvailablePortal]"
+                          cachedDataType="bool"
+                          cachedName="AvailablePortal"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[AvailablePortal]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[BoxID]"
+                          cachedDataType="i4"
+                          cachedName="BoxID"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[BoxName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="BoxName"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxName]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[BoxHeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxHeight"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxHeight]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[BoxLength]"
+                          cachedDataType="r8"
+                          cachedName="BoxLength"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLength]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[BoxWidth]"
+                          cachedDataType="r8"
+                          cachedName="BoxWidth"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxWidth]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[BoxVolWeight]"
+                          cachedDataType="r8"
+                          cachedName="BoxVolWeight"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxVolWeight]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[BoxLocation]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="BoxLocation"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLocation]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[Active]"
+                          cachedDataType="bool"
+                          cachedName="Active"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Active]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input].Columns[CreateDate]"
+                          cachedDataType="dbDate"
+                          cachedName="CreateDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[ProductID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[ProductID]"
+                          name="ProductID"
+                          sortKeyPosition="2">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[ProductID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Description]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Description]"
+                          name="Description">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Description]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Color]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Color]"
+                          name="Color">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Color]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[CategoryID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[CategoryID]"
+                          name="CategoryID"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[AvailablePortal]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[AvailablePortal]"
+                          name="AvailablePortal">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[AvailablePortal]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxID]"
+                          name="BoxID">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxName]"
+                          name="BoxName">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxName]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxHeight]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxHeight]"
+                          name="BoxHeight">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxHeight]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxLength]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxLength]"
+                          name="BoxLength">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLength]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxWidth]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxWidth]"
+                          name="BoxWidth">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxWidth]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxVolWeight]"
+                          dataType="r8"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxVolWeight]"
+                          name="BoxVolWeight">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxVolWeight]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxLocation]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[BoxLocation]"
+                          name="BoxLocation">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[BoxLocation]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Active]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[Active]"
+                          name="Active">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[Active]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[CreateDate]"
+                          dataType="dbDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output].Columns[CreateDate]"
+                          name="CreateDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Load Staging Area\Sort 7"
+                  componentClassID="Microsoft.Sort"
+                  contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+                  name="Sort 7"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                      name="EliminateDuplicates">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of threads to use for sorting."
+                      expressionType="Notify"
+                      name="MaximumThreads">-1</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Load Staging Area\Sort 7.Inputs[Sort Input]"
+                      name="Sort Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Inputs[Sort Input].Columns[CategoryID]"
+                          cachedDataType="i4"
+                          cachedName="CategoryID"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">1</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Inputs[Sort Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Name"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Name]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Inputs[Sort Input].Columns[Gender]"
+                          cachedDataType="wstr"
+                          cachedLength="1"
+                          cachedName="Gender"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Gender]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Inputs[Sort Input].Columns[CreateDate]"
+                          cachedDataType="dbDate"
+                          cachedName="CreateDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the comparison options for character data."
+                              name="NewComparisonFlags">0</property>
+                            <property
+                              dataType="System.Int32"
+                              description="Specifies the sort order of the column."
+                              name="NewSortKeyPosition">0</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output]"
+                      isSorted="true"
+                      name="Sort Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[CategoryID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[CategoryID]"
+                          name="CategoryID"
+                          sortKeyPosition="1">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CategoryID]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[Name]"
+                          name="Name">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Name]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[Gender]"
+                          dataType="wstr"
+                          length="1"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[Gender]"
+                          name="Gender">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[Gender]}</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[CreateDate]"
+                          dataType="dbDate"
+                          lineageId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output].Columns[CreateDate]"
+                          name="CreateDate">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the lineage identifier of the input column that is associated with this output column."
+                              name="SortColumnId">#{Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output].Columns[CreateDate]}</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
               </components>
               <paths>
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Conditional Split Default Output1]"
+                  endId="Package\Load Staging Area\Load Staging Area\Sort 6.Inputs[Sort Input]"
+                  name="Conditional Split Default Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Conditional Split Default Output]" />
                 <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[Conditional Split Default Output]"
                   endId="Package\Load Staging Area\Load Staging Area\Sort 4.Inputs[Sort Input]"
                   name="Conditional Split Default Output"
                   startId="Package\Load Staging Area\Load Staging Area\Conditional Split.Outputs[Conditional Split Default Output]" />
                 <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Derived Column Output1]"
+                  endId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Outputs[Derived Column Output]" />
+                <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[Derived Column Output]"
                   endId="Package\Load Staging Area\Load Staging Area\Products_MoreOrders Staging Table 1.Inputs[OLE DB Destination Input]"
                   name="Derived Column Output"
                   startId="Package\Load Staging Area\Load Staging Area\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Merge Join Output1]"
+                  endId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table.Inputs[OLE DB Destination Input]"
+                  name="Merge Join Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[Merge Join Output]"
                   endId="Package\Load Staging Area\Load Staging Area\Products_MoreOrders Staging Table.Inputs[OLE DB Destination Input]"
@@ -6315,10 +8529,45 @@
                   name="Merge Output 1"
                   startId="Package\Load Staging Area\Load Staging Area\Merge OrderLine with OrderLineDetails 2.Outputs[Merge Output 1]" />
                 <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Null1]"
+                  endId="Package\Load Staging Area\Load Staging Area\Derived Column 1.Inputs[Derived Column Input]"
+                  name="Null"
+                  startId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Outputs[Null]" />
+                <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[Null]"
                   endId="Package\Load Staging Area\Load Staging Area\Derived Column.Inputs[Derived Column Input]"
                   name="Null"
                   startId="Package\Load Staging Area\Load Staging Area\Conditional Split.Outputs[Null]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output5]"
+                  endId="Package\Load Staging Area\Load Staging Area\Sort 5.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Boxes_MoreOrders.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output]"
+                  endId="Package\Load Staging Area\Load Staging Area\Sort 3.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Load Staging Area\OrderLineDetails_PlusOrders.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output9]"
+                  endId="Package\Load Staging Area\Load Staging Area\Sort 7.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Category_PlusOrders.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output8]"
+                  endId="Package\Load Staging Area\Load Staging Area\Conditional Split 1.Inputs[Conditional Split Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Products_PlusOrders.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output1]"
+                  endId="Package\Load Staging Area\Load Staging Area\Sort.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Load Staging Area\OrderLine_MoreOrders.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output4]"
+                  endId="Package\Load Staging Area\Load Staging Area\Sort 2.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Load Staging Area\OrderLine_PlusOrders.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output2]"
                   endId="Package\Load Staging Area\Load Staging Area\Customers_MoreOrders Staging Table.Inputs[OLE DB Destination Input]"
@@ -6330,65 +8579,55 @@
                   name="OLE DB Source Output"
                   startId="Package\Load Staging Area\Load Staging Area\Customers_PlusOrders.Outputs[OLE DB Source Output]" />
                 <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output4]"
-                  endId="Package\Load Staging Area\Load Staging Area\Sort 2.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Load Staging Area\Load Staging Area\OrderLine_PlusOrders.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output5]"
-                  endId="Package\Load Staging Area\Load Staging Area\Sort 5.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Load Staging Area\Load Staging Area\Boxes_MoreOrders.Outputs[OLE DB Source Output]" />
-                <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output6]"
                   endId="Package\Load Staging Area\Load Staging Area\Sort 1.Inputs[Sort Input]"
                   name="OLE DB Source Output"
                   startId="Package\Load Staging Area\Load Staging Area\OrderLineDetails_MoreOrders.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output]"
-                  endId="Package\Load Staging Area\Load Staging Area\Sort 3.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Load Staging Area\Load Staging Area\OrderLineDetails_PlusOrders.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output7]"
                   endId="Package\Load Staging Area\Load Staging Area\Conditional Split.Inputs[Conditional Split Input]"
                   name="OLE DB Source Output"
                   startId="Package\Load Staging Area\Load Staging Area\Products_MoreOrders.Outputs[OLE DB Source Output]" />
                 <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output1]"
-                  endId="Package\Load Staging Area\Load Staging Area\Sort.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Load Staging Area\Load Staging Area\OrderLine_MoreOrders.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output1]"
-                  endId="Package\Load Staging Area\Load Staging Area\Merge OrderLine with OrderLineDetails 1.Inputs[Merge Input 1]"
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output5]"
+                  endId="Package\Load Staging Area\Load Staging Area\Merge Join.Inputs[Merge Join Right Input]"
                   name="Sort Output"
-                  startId="Package\Load Staging Area\Load Staging Area\Sort.Outputs[Sort Output]" />
+                  startId="Package\Load Staging Area\Load Staging Area\Sort 5.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output2]"
-                  endId="Package\Load Staging Area\Load Staging Area\Merge OrderLine with OrderLineDetails 1.Inputs[Merge Input 2]"
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output7]"
+                  endId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Right Input]"
                   name="Sort Output"
-                  startId="Package\Load Staging Area\Load Staging Area\Sort 1.Outputs[Sort Output]" />
+                  startId="Package\Load Staging Area\Load Staging Area\Sort 7.Outputs[Sort Output]" />
                 <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output3]"
                   endId="Package\Load Staging Area\Load Staging Area\Merge OrderLine with OrderLineDetails 2.Inputs[Merge Input 1]"
                   name="Sort Output"
                   startId="Package\Load Staging Area\Load Staging Area\Sort 2.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output4]"
-                  endId="Package\Load Staging Area\Load Staging Area\Merge Join.Inputs[Merge Join Left Input]"
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output2]"
+                  endId="Package\Load Staging Area\Load Staging Area\Merge OrderLine with OrderLineDetails 1.Inputs[Merge Input 2]"
                   name="Sort Output"
-                  startId="Package\Load Staging Area\Load Staging Area\Sort 4.Outputs[Sort Output]" />
+                  startId="Package\Load Staging Area\Load Staging Area\Sort 1.Outputs[Sort Output]" />
                 <path
-                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output5]"
-                  endId="Package\Load Staging Area\Load Staging Area\Merge Join.Inputs[Merge Join Right Input]"
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output1]"
+                  endId="Package\Load Staging Area\Load Staging Area\Merge OrderLine with OrderLineDetails 1.Inputs[Merge Input 1]"
                   name="Sort Output"
-                  startId="Package\Load Staging Area\Load Staging Area\Sort 5.Outputs[Sort Output]" />
+                  startId="Package\Load Staging Area\Load Staging Area\Sort.Outputs[Sort Output]" />
                 <path
                   refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output]"
                   endId="Package\Load Staging Area\Load Staging Area\Merge OrderLine with OrderLineDetails 2.Inputs[Merge Input 2]"
                   name="Sort Output"
                   startId="Package\Load Staging Area\Load Staging Area\Sort 3.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output6]"
+                  endId="Package\Load Staging Area\Load Staging Area\Merge Join 1.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Sort 6.Outputs[Sort Output]" />
+                <path
+                  refId="Package\Load Staging Area\Load Staging Area.Paths[Sort Output4]"
+                  endId="Package\Load Staging Area\Load Staging Area\Merge Join.Inputs[Merge Join Left Input]"
+                  name="Sort Output"
+                  startId="Package\Load Staging Area\Load Staging Area\Sort 4.Outputs[Sort Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -6590,11 +8829,11 @@
         <NodeLayout
           Size="187,42"
           Id="Package\Load Staging Area\Load Staging Area\Products_MoreOrders"
-          TopLeft="821,11" />
+          TopLeft="739,7" />
         <NodeLayout
           Size="189,42"
           Id="Package\Load Staging Area\Load Staging Area\OrderLine_PlusOrders"
-          TopLeft="108.5,588.777777777778" />
+          TopLeft="86.5,563.777777777778" />
         <NodeLayout
           Size="99,42"
           Id="Package\Load Staging Area\Load Staging Area\Sort"
@@ -6825,30 +9064,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output4]"
-          TopLeft="203,630.777777777778">
+          TopLeft="181,605.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14,40.2222222222219"
+              EndConnector="8,65.2222222222219"
               Start="0,0"
-              End="-14,32.7222222222219">
+              End="8,57.7222222222219">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.111111111111" />
+                    End="0,28.611111111111" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.111111111111"
-                    Point2="0,20.111111111111"
-                    Point3="-4,20.111111111111" />
+                    Point1="0,28.611111111111"
+                    Point2="0,32.611111111111"
+                    Point3="4,32.611111111111" />
                   <mssgle:LineSegment
-                    End="-10,20.111111111111" />
+                    End="4,32.611111111111" />
                   <mssgle:CubicBezierSegment
-                    Point1="-10,20.111111111111"
-                    Point2="-14,20.111111111111"
-                    Point3="-14,24.111111111111" />
+                    Point1="4,32.611111111111"
+                    Point2="8,32.611111111111"
+                    Point3="8,36.611111111111" />
                   <mssgle:LineSegment
-                    End="-14,32.7222222222219" />
+                    End="8,57.7222222222219" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7125,30 +9364,30 @@
           TopLeft="677,89" />
         <EdgeLayout
           Id="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output7]"
-          TopLeft="914.5,53">
+          TopLeft="832.5,49">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-158,36"
+              EndConnector="-76,40"
               Start="0,0"
-              End="-158,28.5">
+              End="-76,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14" />
+                    End="0,16" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14"
-                    Point2="0,18"
-                    Point3="-4,18" />
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
                   <mssgle:LineSegment
-                    End="-154,18" />
+                    End="-72,20" />
                   <mssgle:CubicBezierSegment
-                    Point1="-154,18"
-                    Point2="-158,18"
-                    Point3="-158,22" />
+                    Point1="-72,20"
+                    Point2="-76,20"
+                    Point3="-76,24" />
                   <mssgle:LineSegment
-                    End="-158,28.5" />
+                    End="-76,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7227,6 +9466,282 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,101.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Load Staging Area\Load Staging Area\Conditional Split 1"
+          TopLeft="604,518" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Load Staging Area\Load Staging Area\Products_PlusOrders"
+          TopLeft="636,404" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Load Staging Area\Load Staging Area\Category_PlusOrders"
+          TopLeft="902,401" />
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output8]"
+          TopLeft="728,446">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40,72"
+              Start="0,0"
+              End="-40,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="-4,36" />
+                  <mssgle:LineSegment
+                    End="-36,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-36,36"
+                    Point2="-40,36"
+                    Point3="-40,40" />
+                  <mssgle:LineSegment
+                    End="-40,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Load Staging Area\Load Staging Area\Sort 6"
+          TopLeft="845,517" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Load Staging Area\Load Staging Area\Sort 7"
+          TopLeft="1011,489" />
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[OLE DB Source Output9]"
+          TopLeft="994.5,443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.5,46"
+              Start="0,0"
+              End="70.5,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="66.5,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.5,23"
+                    Point2="70.5,23"
+                    Point3="70.5,27" />
+                  <mssgle:LineSegment
+                    End="70.5,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[Conditional Split Default Output1]"
+          TopLeft="772,538.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,0"
+              Start="0,0"
+              End="65.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="65.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-37.86390625,5,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Load Staging Area\Load Staging Area\Derived Column 1"
+          TopLeft="610,596" />
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[Null1]"
+          TopLeft="690.75,560">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8.70212890625,9.37548828125,17.4042578125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="263,42"
+          Id="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1"
+          TopLeft="565,713" />
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table"
+          TopLeft="845,712" />
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[Derived Column Output1]"
+          TopLeft="695,638">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75"
+              Start="0,0"
+              End="0,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Load Staging Area\Load Staging Area\Merge Join 1"
+          TopLeft="849,601" />
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[Sort Output6]"
+          TopLeft="899,559">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="21,42"
+              Start="0,0"
+              End="21,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="17,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17,21"
+                    Point2="21,21"
+                    Point3="21,25" />
+                  <mssgle:LineSegment
+                    End="21,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[Sort Output7]"
+          TopLeft="1065,531">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-122.666666666667,70"
+              Start="0,0"
+              End="-122.666666666667,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5320334261839" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5320334261839"
+                    Point2="0,41.5320334261839"
+                    Point3="-4,41.5320334261839" />
+                  <mssgle:LineSegment
+                    End="-118.666666666667,41.5320334261839" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-118.666666666667,41.5320334261839"
+                    Point2="-122.666666666667,41.5320334261839"
+                    Point3="-122.666666666667,45.5320334261839" />
+                  <mssgle:LineSegment
+                    End="-122.666666666667,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Staging Area\Load Staging Area.Paths[Merge Join Output1]"
+          TopLeft="920,643">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52,69"
+              Start="0,0"
+              End="52,61.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5"
+                    Point2="0,34.5"
+                    Point3="4,34.5" />
+                  <mssgle:LineSegment
+                    End="48,34.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48,34.5"
+                    Point2="52,34.5"
+                    Point3="52,38.5" />
+                  <mssgle:LineSegment
+                    End="52,61.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7409,6 +9924,58 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Load Staging Area\Load Staging Area\Products_MoreOrders Staging Table 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Area\Load Staging Area\Products_PlusOrders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Area\Load Staging Area\Category_PlusOrders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Area\Load Staging Area\Products_PlusOrders Staging Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

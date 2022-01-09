@@ -9,7 +9,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Products_MoreOrders')
 	[CategoryGender] [nchar](1) NULL,
 	[AvailablePortal] [bit] NULL,
 	[Active] [bit] NULL,
-    [BoxID] [int] NOT NULL,
+    [BoxID] [int] NULL,
 	[BoxName] [nvarchar](255) NULL,
 	[BoxHeight] [float] NULL,
 	[BoxLength] [float] NULL,

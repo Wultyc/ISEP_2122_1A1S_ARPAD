@@ -10,9 +10,8 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Orders_Stg')
 	[TotalWithShipping] [money] NULL,
 	[Address] [nvarchar](255) NULL,
 	[CountryID] [int] NULL,
-	[City] [nvarchar](255) NULL,
 	[State] [nvarchar](255) NULL,
-	[Zip] [float] NULL,
+	[Zip_City] [nvarchar](255) NULL,
 	[Currency] [nvarchar](3) NULL,
     [SystemID] [int] NULL
 	)

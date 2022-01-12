@@ -3,7 +3,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Products_Stg')
 	(
 	[ProductID] [int] NOT NULL,
 	[Description] [nvarchar](255) NULL,
-	[Color] [nvarchar](255) NULL,
 	[CategoryID] [int] NULL,
 	[CategoryName] [nvarchar](255) NULL,
 	[CategoryGender] [nchar](1) NULL,

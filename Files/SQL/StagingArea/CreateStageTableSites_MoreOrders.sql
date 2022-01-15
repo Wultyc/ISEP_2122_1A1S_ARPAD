@@ -1,4 +1,4 @@
-IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_MoreOrders')
+	IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_MoreOrders')
 	CREATE TABLE [dbo].[Site_MoreOrders]
 	(
 	[SiteID] [int] NOT NULL,

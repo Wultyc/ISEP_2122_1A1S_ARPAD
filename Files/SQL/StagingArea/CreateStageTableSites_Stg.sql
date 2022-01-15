@@ -8,7 +8,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_Stg')
 	[SiteName] [nvarchar](255) NULL,
 	[Initials] [nvarchar](3) NULL,
 	[Currency] [nvarchar](3) NULL,
-	[SiteInfoID] [int] NULL,
 	[StoreContact] [nvarchar](255) NULL,
 	[AddressLine1] [nvarchar](255) NULL,
 	[AddressLine2] [nvarchar](255) NULL,
@@ -17,7 +16,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_Stg')
 	[Phone] [bigint] NULL,
 	[PickupHour] [int] NULL,
 	[DailyPickup] [bit] NULL,
-	[TimeZone] [nvarchar](255) NULL,
-    [SystemID] [int] NULL
+	[TimeZone] [nvarchar](255) NULL
 	)
 TRUNCATE TABLE Site_Stg  

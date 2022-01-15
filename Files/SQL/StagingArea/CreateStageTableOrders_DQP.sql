@@ -16,4 +16,4 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Orders_DQP')
 	[SystemID] [nvarchar](10) NULL,
 	[DQP] [nvarchar] (255) NULL
 	) 
-TRUNCATE TABLE Orders_PlusOrders    
+TRUNCATE TABLE Orders_DQP    

@@ -12,7 +12,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Site_PlusOrders')
 	[AddressLine1] [nvarchar](255) NULL,
 	[AddressLine2] [nvarchar](255) NULL,
 	[Zip_City] [nvarchar](255) NULL,
-	[CountryID] [int] NULL,
+	[CountryCode] [nvarchar](2) NULL,
 	[Phone] [bigint] NULL,
 	[PickupHour] [int] NULL,
 	[DailyPickup] [bit] NULL,

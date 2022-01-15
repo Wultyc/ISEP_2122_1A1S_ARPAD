@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="90"
-  DTS:VersionGUID="{969CD927-4AAD-4E77-BE8B-F513099C86D9}">
+  DTS:VersionBuild="92"
+  DTS:VersionGUID="{AC56408F-0750-4F41-8176-7C8612D8E7A7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -18660,6 +18660,1764 @@ where [refTable].[CountryID] = ?</property>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\Load Staging Area\Sites Merge"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{73B1A983-171B-4EED-8BAB-820252CE4C30}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Sites Merge"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load Staging Area\Sites Merge\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Site_Stg]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SiteID]"
+                          cachedDataType="i4"
+                          cachedName="SiteID"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteID]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Name"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Name]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsSite]"
+                          cachedDataType="bool"
+                          cachedName="IsSite"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsSite]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[IsSite]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SiteURL]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SiteURL"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteURL]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteURL]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SiteName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SiteName"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteName]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteName]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Initials]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="Initials"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Initials]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Initials]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Currency]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="Currency"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Currency]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SiteInfoID]"
+                          cachedDataType="i4"
+                          cachedName="SiteInfoID"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteInfoID]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteInfoID]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StoreContact]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="StoreContact"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreContact]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[StoreContact]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressLine1]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="AddressLine1"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine1]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressLine2]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="AddressLine2"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine2]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Zip_City]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Zip_City"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Zip_City]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Zip_City]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CountryCode]"
+                          cachedDataType="wstr"
+                          cachedLength="2"
+                          cachedName="CountryCode"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryCode]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[CountryCode]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Phone]"
+                          cachedDataType="i8"
+                          cachedName="Phone"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Phone]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PickupHour]"
+                          cachedDataType="i4"
+                          cachedName="PickupHour"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PickupHour]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[PickupHour]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DailyPickup]"
+                          cachedDataType="bool"
+                          cachedName="DailyPickup"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DailyPickup]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[DailyPickup]" />
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TimeZone]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimeZone"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeZone]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[TimeZone]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteID]"
+                          dataType="i4"
+                          name="SiteID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsSite]"
+                          dataType="bool"
+                          name="IsSite" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteURL]"
+                          dataType="wstr"
+                          length="255"
+                          name="SiteURL" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteName]"
+                          dataType="wstr"
+                          length="255"
+                          name="SiteName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Initials]"
+                          dataType="wstr"
+                          length="3"
+                          name="Initials" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
+                          dataType="wstr"
+                          length="3"
+                          name="Currency" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SiteInfoID]"
+                          dataType="i4"
+                          name="SiteInfoID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreContact]"
+                          dataType="wstr"
+                          length="255"
+                          name="StoreContact" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
+                          dataType="wstr"
+                          length="255"
+                          name="AddressLine1" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine2]"
+                          dataType="wstr"
+                          length="255"
+                          name="AddressLine2" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Zip_City]"
+                          dataType="wstr"
+                          length="255"
+                          name="Zip_City" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryCode]"
+                          dataType="wstr"
+                          length="2"
+                          name="CountryCode" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                          dataType="i8"
+                          name="Phone" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PickupHour]"
+                          dataType="i4"
+                          name="PickupHour" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DailyPickup]"
+                          dataType="bool"
+                          name="DailyPickup" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeZone]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimeZone" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SystemID]"
+                          dataType="i4"
+                          name="SystemID" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Sites MoreOrders"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Site_MoreOrders]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteID]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteID]"
+                          name="SiteID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Name]"
+                          name="Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[IsSite]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[IsSite]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[IsSite]"
+                          name="IsSite"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteURL]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteURL]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteURL]"
+                          name="SiteURL"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteName]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteName]"
+                          name="SiteName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Initials]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Initials]"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Initials]"
+                          name="Initials"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Currency]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Currency]"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Currency]"
+                          name="Currency"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteInfoID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteInfoID]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteInfoID]"
+                          name="SiteInfoID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[StoreContact]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[StoreContact]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[StoreContact]"
+                          name="StoreContact"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[AddressLine1]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[AddressLine1]"
+                          name="AddressLine1"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[AddressLine2]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[AddressLine2]"
+                          name="AddressLine2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Zip_City]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Zip_City]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Zip_City]"
+                          name="Zip_City"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[CountryCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[CountryCode]"
+                          length="2"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[CountryCode]"
+                          name="CountryCode"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Phone]"
+                          dataType="i8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Phone]"
+                          name="Phone"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[PickupHour]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[PickupHour]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[PickupHour]"
+                          name="PickupHour"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[DailyPickup]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[DailyPickup]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[DailyPickup]"
+                          name="DailyPickup"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[TimeZone]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[TimeZone]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[TimeZone]"
+                          name="TimeZone"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteID]"
+                          dataType="i4"
+                          name="SiteID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[IsSite]"
+                          dataType="bool"
+                          name="IsSite" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteURL]"
+                          dataType="wstr"
+                          length="255"
+                          name="SiteURL" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteName]"
+                          dataType="wstr"
+                          length="255"
+                          name="SiteName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Initials]"
+                          dataType="wstr"
+                          length="3"
+                          name="Initials" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Currency]"
+                          dataType="wstr"
+                          length="3"
+                          name="Currency" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[SiteInfoID]"
+                          dataType="i4"
+                          name="SiteInfoID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[StoreContact]"
+                          dataType="wstr"
+                          length="255"
+                          name="StoreContact" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1]"
+                          dataType="wstr"
+                          length="255"
+                          name="AddressLine1" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2]"
+                          dataType="wstr"
+                          length="255"
+                          name="AddressLine2" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Zip_City]"
+                          dataType="wstr"
+                          length="255"
+                          name="Zip_City" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[CountryCode]"
+                          dataType="wstr"
+                          length="2"
+                          name="CountryCode" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                          dataType="i8"
+                          name="Phone" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[PickupHour]"
+                          dataType="i4"
+                          name="PickupHour" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[DailyPickup]"
+                          dataType="bool"
+                          name="DailyPickup" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].ExternalColumns[TimeZone]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimeZone" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteID]"
+                          name="SiteID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Name]"
+                          name="Name" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[IsSite]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[IsSite]"
+                          name="IsSite" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteURL]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteURL]"
+                          name="SiteURL" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteName]"
+                          name="SiteName" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Initials]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Initials]"
+                          name="Initials" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Currency]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Currency]"
+                          name="Currency" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteInfoID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[SiteInfoID]"
+                          name="SiteInfoID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[StoreContact]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[StoreContact]"
+                          name="StoreContact" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[AddressLine1]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[AddressLine1]"
+                          name="AddressLine1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[AddressLine2]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[AddressLine2]"
+                          name="AddressLine2" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Zip_City]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Zip_City]"
+                          name="Zip_City" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[CountryCode]"
+                          dataType="wstr"
+                          length="2"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[CountryCode]"
+                          name="CountryCode" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                          dataType="i8"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                          name="Phone" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[PickupHour]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[PickupHour]"
+                          name="PickupHour" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[DailyPickup]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[DailyPickup]"
+                          name="DailyPickup" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[TimeZone]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[TimeZone]"
+                          name="TimeZone" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="Sites Plus Orders"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Site_PlusOrders]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.ProjectStagingArea]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[SiteID]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteID]"
+                          name="SiteID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Name]"
+                          name="Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[IsSite]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[IsSite]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[IsSite]"
+                          name="IsSite"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteURL]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[SiteURL]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteURL]"
+                          name="SiteURL"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[SiteName]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteName]"
+                          name="SiteName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Initials]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Initials]"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Initials]"
+                          name="Initials"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Currency]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Currency]"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Currency]"
+                          name="Currency"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[StoreContact]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[StoreContact]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[StoreContact]"
+                          name="StoreContact"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[AddressLine1]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[AddressLine1]"
+                          name="AddressLine1"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[AddressLine2]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[AddressLine2]"
+                          name="AddressLine2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Zip_City]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Zip_City]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Zip_City]"
+                          name="Zip_City"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[CountryCode]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[CountryCode]"
+                          length="2"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[CountryCode]"
+                          name="CountryCode"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Phone]"
+                          dataType="i8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Phone]"
+                          name="Phone"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[PickupHour]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[PickupHour]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[PickupHour]"
+                          name="PickupHour"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[DailyPickup]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[DailyPickup]"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[DailyPickup]"
+                          name="DailyPickup"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[TimeZone]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[TimeZone]"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[TimeZone]"
+                          name="TimeZone"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[SiteID]"
+                          dataType="i4"
+                          name="SiteID" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          name="Name" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[IsSite]"
+                          dataType="bool"
+                          name="IsSite" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[SiteURL]"
+                          dataType="wstr"
+                          length="255"
+                          name="SiteURL" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[SiteName]"
+                          dataType="wstr"
+                          length="255"
+                          name="SiteName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Initials]"
+                          dataType="wstr"
+                          length="3"
+                          name="Initials" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Currency]"
+                          dataType="wstr"
+                          length="3"
+                          name="Currency" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[StoreContact]"
+                          dataType="wstr"
+                          length="255"
+                          name="StoreContact" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine1]"
+                          dataType="wstr"
+                          length="255"
+                          name="AddressLine1" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[AddressLine2]"
+                          dataType="wstr"
+                          length="255"
+                          name="AddressLine2" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Zip_City]"
+                          dataType="wstr"
+                          length="255"
+                          name="Zip_City" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[CountryCode]"
+                          dataType="wstr"
+                          length="2"
+                          name="CountryCode" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                          dataType="i8"
+                          name="Phone" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[PickupHour]"
+                          dataType="i4"
+                          name="PickupHour" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[DailyPickup]"
+                          dataType="bool"
+                          name="DailyPickup" />
+                        <externalMetadataColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].ExternalColumns[TimeZone]"
+                          dataType="wstr"
+                          length="255"
+                          name="TimeZone" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[SiteID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[SiteID]"
+                          name="SiteID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Name]"
+                          name="Name" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[IsSite]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[IsSite]"
+                          name="IsSite" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[SiteURL]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[SiteURL]"
+                          name="SiteURL" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[SiteName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[SiteName]"
+                          name="SiteName" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Initials]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Initials]"
+                          name="Initials" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Currency]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Currency]"
+                          name="Currency" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[StoreContact]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[StoreContact]"
+                          name="StoreContact" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[AddressLine1]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[AddressLine1]"
+                          name="AddressLine1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[AddressLine2]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[AddressLine2]"
+                          name="AddressLine2" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Zip_City]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Zip_City]"
+                          name="Zip_City" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[CountryCode]"
+                          dataType="wstr"
+                          length="2"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[CountryCode]"
+                          name="CountryCode" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                          dataType="i8"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                          name="Phone" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[PickupHour]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[PickupHour]"
+                          name="PickupHour" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[DailyPickup]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[DailyPickup]"
+                          name="DailyPickup" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[TimeZone]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[TimeZone]"
+                          name="TimeZone" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Staging Area\Sites Merge\Union All"
+                  componentClassID="Microsoft.UnionAll"
+                  contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+                  name="Union All"
+                  version="1">
+                  <inputs>
+                    <input
+                      refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1]"
+                      name="Union All Input 1">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[SiteID]"
+                          cachedDataType="i4"
+                          cachedName="SiteID"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteID]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteID]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Name"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Name]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Name]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[IsSite]"
+                          cachedDataType="bool"
+                          cachedName="IsSite"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[IsSite]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[IsSite]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[SiteURL]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SiteURL"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteURL]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteURL]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[SiteName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SiteName"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteName]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[Initials]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="Initials"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Initials]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Initials]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[Currency]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="Currency"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Currency]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Currency]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[SiteInfoID]"
+                          cachedDataType="i4"
+                          cachedName="SiteInfoID"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[SiteInfoID]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteInfoID]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[StoreContact]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="StoreContact"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[StoreContact]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[StoreContact]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[AddressLine1]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="AddressLine1"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[AddressLine1]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine1]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[AddressLine2]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="AddressLine2"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[AddressLine2]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine2]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[Zip_City]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Zip_City"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Zip_City]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Zip_City]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[CountryCode]"
+                          cachedDataType="wstr"
+                          cachedLength="2"
+                          cachedName="CountryCode"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[CountryCode]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[CountryCode]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[Phone]"
+                          cachedDataType="i8"
+                          cachedName="Phone"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[Phone]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Phone]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[PickupHour]"
+                          cachedDataType="i4"
+                          cachedName="PickupHour"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[PickupHour]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[PickupHour]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[DailyPickup]"
+                          cachedDataType="bool"
+                          cachedName="DailyPickup"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[DailyPickup]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[DailyPickup]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1].Columns[TimeZone]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimeZone"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output].Columns[TimeZone]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[TimeZone]}</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2]"
+                      hasSideEffects="true"
+                      name="Union All Input 2">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[SiteID]"
+                          cachedDataType="i4"
+                          cachedName="SiteID"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteID]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteID]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Name"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Name]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Name]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[IsSite]"
+                          cachedDataType="bool"
+                          cachedName="IsSite"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[IsSite]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[IsSite]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[SiteURL]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SiteURL"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteURL]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteURL]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[SiteName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SiteName"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[SiteName]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteName]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[Initials]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="Initials"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Initials]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Initials]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[Currency]"
+                          cachedDataType="wstr"
+                          cachedLength="3"
+                          cachedName="Currency"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Currency]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Currency]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[StoreContact]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="StoreContact"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[StoreContact]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[StoreContact]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[AddressLine1]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="AddressLine1"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[AddressLine1]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine1]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[AddressLine2]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="AddressLine2"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[AddressLine2]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine2]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[Zip_City]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Zip_City"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Zip_City]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Zip_City]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[CountryCode]"
+                          cachedDataType="wstr"
+                          cachedLength="2"
+                          cachedName="CountryCode"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[CountryCode]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[CountryCode]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[Phone]"
+                          cachedDataType="i8"
+                          cachedName="Phone"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[Phone]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Phone]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[PickupHour]"
+                          cachedDataType="i4"
+                          cachedName="PickupHour"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[PickupHour]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[PickupHour]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[DailyPickup]"
+                          cachedDataType="bool"
+                          cachedName="DailyPickup"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[DailyPickup]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[DailyPickup]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2].Columns[TimeZone]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="TimeZone"
+                          lineageId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output].Columns[TimeZone]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[TimeZone]}</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 3]"
+                      dangling="true"
+                      hasSideEffects="true"
+                      name="Union All Input 3">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1]"
+                      name="Union All Output 1">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteID]"
+                          name="SiteID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Name]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Name]"
+                          name="Name" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[IsSite]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[IsSite]"
+                          name="IsSite" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteURL]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteURL]"
+                          name="SiteURL" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteName]"
+                          name="SiteName" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Initials]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Initials]"
+                          name="Initials" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Currency]"
+                          dataType="wstr"
+                          length="3"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Currency]"
+                          name="Currency" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteInfoID]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[SiteInfoID]"
+                          name="SiteInfoID" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[StoreContact]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[StoreContact]"
+                          name="StoreContact" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine1]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine1]"
+                          name="AddressLine1" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine2]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[AddressLine2]"
+                          name="AddressLine2" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Zip_City]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Zip_City]"
+                          name="Zip_City" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[CountryCode]"
+                          dataType="wstr"
+                          length="2"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[CountryCode]"
+                          name="CountryCode" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Phone]"
+                          dataType="i8"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[Phone]"
+                          name="Phone" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[PickupHour]"
+                          dataType="i4"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[PickupHour]"
+                          name="PickupHour" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[DailyPickup]"
+                          dataType="bool"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[DailyPickup]"
+                          name="DailyPickup" />
+                        <outputColumn
+                          refId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[TimeZone]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1].Columns[TimeZone]"
+                          name="TimeZone" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load Staging Area\Sites Merge.Paths[OLE DB Source Output]"
+                  endId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 1]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Sites Merge\Sites MoreOrders.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Staging Area\Sites Merge.Paths[OLE DB Source Output1]"
+                  endId="Package\Load Staging Area\Sites Merge\Union All.Inputs[Union All Input 2]"
+                  name="OLE DB Source Output"
+                  startId="Package\Load Staging Area\Sites Merge\Sites Plus Orders.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Load Staging Area\Sites Merge.Paths[Union All Output 1]"
+                  endId="Package\Load Staging Area\Sites Merge\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Union All Output 1"
+                  startId="Package\Load Staging Area\Sites Merge\Union All.Outputs[Union All Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Load Staging Area\Size"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
@@ -21969,7 +23727,7 @@ where [refTable].[CountryID] = ?</property>
         <NodeLayout
           Size="104,42"
           Id="Package\Load Staging Area\Sites"
-          TopLeft="434,128" />
+          TopLeft="433,127" />
         <NodeLayout
           Size="166,42"
           Id="Package\Load Staging Area\Customers Merge"
@@ -21996,11 +23754,15 @@ where [refTable].[CountryID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Load Staging Area\Sites Merge"
+          TopLeft="411,206" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="639,259"
-          Size="639,302"
+          PanelSize="639,311"
+          Size="639,354"
           Id="Package\Load Staging Area"
           TopLeft="248.454545454545,385.434343434343" />
         <NodeLayout
@@ -22060,30 +23822,24 @@ where [refTable].[CountryID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="567.954545454545,687.434343434343">
+          TopLeft="567.954545454545,739.434343434343">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-119.954545454545,66.565656565657"
+              EndConnector="54.045454545455,145.065656565657"
               Start="0,0"
-              End="-119.954545454545,59.065656565657">
+              End="46.545454545455,145.065656565657">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.2828282828285" />
+                    End="0,141.065656565657" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,29.2828282828285"
-                    Point2="0,33.2828282828285"
-                    Point3="-4,33.2828282828285" />
+                    Point1="0,141.065656565657"
+                    Point2="0,145.065656565657"
+                    Point3="4,145.065656565657" />
                   <mssgle:LineSegment
-                    End="-115.954545454545,33.2828282828285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-115.954545454545,33.2828282828285"
-                    Point2="-119.954545454545,33.2828282828285"
-                    Point3="-119.954545454545,37.2828282828285" />
-                  <mssgle:LineSegment
-                    End="-119.954545454545,59.065656565657" />
+                    End="46.545454545455,145.065656565657" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -24941,6 +26697,159 @@ where [refTable].[CountryID] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load Staging Area\Sites Merge">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Load Staging Area\Sites Merge\Union All"
+          TopLeft="374,180" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Load Staging Area\Sites Merge\OLE DB Destination"
+          TopLeft="348,288" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Load Staging Area\Sites Merge\Sites MoreOrders"
+          TopLeft="196,41" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Load Staging Area\Sites Merge\Sites Plus Orders"
+          TopLeft="558,35" />
+        <EdgeLayout
+          Id="Package\Load Staging Area\Sites Merge.Paths[OLE DB Source Output]"
+          TopLeft="278.5,83">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="137.833333333333,97"
+              Start="0,0"
+              End="137.833333333333,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.4526484751204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.4526484751204"
+                    Point2="0,57.4526484751204"
+                    Point3="4,57.4526484751204" />
+                  <mssgle:LineSegment
+                    End="133.833333333333,57.4526484751204" />
+                  <mssgle:CubicBezierSegment
+                    Point1="133.833333333333,57.4526484751204"
+                    Point2="137.833333333333,57.4526484751204"
+                    Point3="137.833333333333,61.4526484751204" />
+                  <mssgle:LineSegment
+                    End="137.833333333333,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Staging Area\Sites Merge.Paths[OLE DB Source Output1]"
+          TopLeft="640,77">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-185.333333333333,103"
+              Start="0,0"
+              End="-185.333333333333,95.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.0064205457464" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57.0064205457464"
+                    Point2="0,61.0064205457464"
+                    Point3="-4,61.0064205457464" />
+                  <mssgle:LineSegment
+                    End="-181.333333333333,61.0064205457464" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-181.333333333333,61.0064205457464"
+                    Point2="-185.333333333333,61.0064205457464"
+                    Point3="-185.333333333333,65.0064205457464" />
+                  <mssgle:LineSegment
+                    End="-185.333333333333,95.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Staging Area\Sites Merge.Paths[Union All Output 1]"
+          TopLeft="436,222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66"
+              Start="0,0"
+              End="0,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Area\Sites Merge\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Area\Sites Merge\Sites MoreOrders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Staging Area\Sites Merge\Sites Plus Orders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

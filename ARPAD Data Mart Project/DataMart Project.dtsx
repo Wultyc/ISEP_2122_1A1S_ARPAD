@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="142"
-  DTS:VersionGUID="{BBEDDB5A-F9A2-4E5E-BB6B-A3662C9299CE}">
+  DTS:VersionBuild="146"
+  DTS:VersionGUID="{10D6BE09-D34C-4D45-BFE8-C65F14751B54}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -36,6 +36,134 @@
         DTS:Name="ConnectionString">@[User::StgFilename]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV Dim Currency]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C2A1C1AC-CE61-4B6D-AC4D-DD65FB786D04}"
+      DTS:ObjectName="CSV Dim Currency">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2070"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\ARPAD\arpad_1161042_1160929\Files\Excel\DimCurrency.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data"
+              DTS:DTSID="{CE0E3DDE-C5B5-48CB-989E-3D8E73E8012E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Eur"
+              DTS:DTSID="{DA4DF2B1-E61B-4DC1-92FD-869A4065D1B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GBP"
+              DTS:DTSID="{A2513EF1-D4C3-414D-BCDB-B618C2C3BF49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="USD"
+              DTS:DTSID="{3AFC223A-F67E-462A-8011-9E53A07A1D4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CAD"
+              DTS:DTSID="{511E4373-951F-43E6-A067-6F842117AAAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AUD"
+              DTS:DTSID="{E3325831-8E37-46A3-9149-F0D6F3414A35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SGD"
+              DTS:DTSID="{ABB27D95-D2A1-46FC-BF89-A4EA7D8418AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CHF"
+              DTS:DTSID="{842D9D47-2DE4-4816-8BCA-B6EABFF4770F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="JPY"
+              DTS:DTSID="{4AF0BAE8-B073-417E-9D77-FCA1E3D1E6B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="KRW"
+              DTS:DTSID="{4D688FC8-E983-441B-9103-18ED3278BABB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BRL"
+              DTS:DTSID="{1E560BF4-31F7-4DE5-BA33-4D8F85FA0443}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="RUB"
+              DTS:DTSID="{2DDDA2D2-CD06-4B58-87D3-AAEBE5C5AB4D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -507,6 +635,7 @@
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:DelayValidation="True"
       DTS:Description="Contêiner da Sequência"
+      DTS:Disabled="True"
       DTS:DTSID="{716919B8-0FF0-40FA-A886-50AA2F94FD9F}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -33319,6 +33448,812 @@ where [refTable].[CountryID] = ?</property>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\Load Temporal Dimensions\Load Currency"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{30667AFE-3B85-4EBD-84EB-1FF7C149E99C}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Load Currency"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="2070"
+                  name="CSV Currency"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CSV Dim Currency]"
+                      connectionManagerRefId="Package.ConnectionManagers[CSV Dim Currency]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[Data]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[Data]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[Data]"
+                          name="Data"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[Eur]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[Eur]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[Eur]"
+                          name="Eur"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[GBP]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[GBP]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[GBP]"
+                          name="GBP"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[USD]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[USD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[USD]"
+                          name="USD"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[CAD]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[CAD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[CAD]"
+                          name="CAD"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[AUD]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[AUD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[AUD]"
+                          name="AUD"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[SGD]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[SGD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[SGD]"
+                          name="SGD"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[CHF]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[CHF]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[CHF]"
+                          name="CHF"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[JPY]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[JPY]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[JPY]"
+                          name="JPY"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[KRW]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[KRW]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[KRW]"
+                          name="KRW"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[BRL]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[BRL]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[BRL]"
+                          name="BRL"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[RUB]"
+                          dataType="r4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[RUB]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[RUB]"
+                          name="RUB"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[Data]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Data" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[Eur]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Eur" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[GBP]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="GBP" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[USD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="USD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[CAD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CAD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[AUD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="AUD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[SGD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="SGD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[CHF]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="CHF" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[JPY]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="JPY" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[KRW]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="KRW" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[BRL]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="BRL" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].ExternalColumns[RUB]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="RUB" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Temporal Dimensions\Load Currency\Currency Load"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Currency Load"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[DimCurrency]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.ProjectDataMart]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.ProjectDataMart]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[Eur]"
+                          cachedDataType="r4"
+                          cachedName="Eur"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[Eur]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[Eur]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[GBP]"
+                          cachedDataType="r4"
+                          cachedName="GBP"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[GBP]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[GBP]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[USD]"
+                          cachedDataType="r4"
+                          cachedName="USD"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[USD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[USD]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[CAD]"
+                          cachedDataType="r4"
+                          cachedName="CAD"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[CAD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[CAD]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[AUD]"
+                          cachedDataType="r4"
+                          cachedName="AUD"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[AUD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[AUD]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[SGD]"
+                          cachedDataType="r4"
+                          cachedName="SGD"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[SGD]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[SGD]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[CHF]"
+                          cachedDataType="r4"
+                          cachedName="CHF"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[CHF]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[CHF]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[JPY]"
+                          cachedDataType="r4"
+                          cachedName="JPY"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[JPY]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[JPY]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[KRW]"
+                          cachedDataType="r4"
+                          cachedName="KRW"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[KRW]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[KRW]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[BRL]"
+                          cachedDataType="r4"
+                          cachedName="BRL"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[BRL]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[BRL]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[RUB]"
+                          cachedDataType="r4"
+                          cachedName="RUB"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[RUB]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[RUB]" />
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                          cachedDataType="i4"
+                          cachedName="DateKey"
+                          externalMetadataColumnId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Match Output].Columns[DateKey]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
+                          dataType="i4"
+                          name="CurrencyKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          dataType="i4"
+                          name="DateKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[Eur]"
+                          dataType="cy"
+                          name="Eur" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[GBP]"
+                          dataType="cy"
+                          name="GBP" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[USD]"
+                          dataType="cy"
+                          name="USD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[CAD]"
+                          dataType="cy"
+                          name="CAD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[AUD]"
+                          dataType="cy"
+                          name="AUD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[SGD]"
+                          dataType="cy"
+                          name="SGD" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[CHF]"
+                          dataType="cy"
+                          name="CHF" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[JPY]"
+                          dataType="cy"
+                          name="JPY" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[KRW]"
+                          dataType="cy"
+                          name="KRW" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[BRL]"
+                          dataType="cy"
+                          name="BRL" />
+                        <externalMetadataColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input].ExternalColumns[RUB]"
+                          dataType="cy"
+                          name="RUB" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Temporal Dimensions\Load Currency\Lookup"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[FullDate] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateName" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="YearName" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthNameFull" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekName" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfMonth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfWeek" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterName" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TrimesterOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TrismesterName" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Half-YearOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Half-YearName" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LeapYear" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Month" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfWeekFull" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Weekend" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Season" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FirstDayOfMonth" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LastDayOfMonth" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[Data]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.ProjectDataMart]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.ProjectDataMart]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Inputs[Lookup Input].Columns[Data]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Data"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output].Columns[Data]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">FullDate</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="IgnoreFailure"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Load Temporal Dimensions\Load Currency\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Match Output].Columns[DateKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Match Output].Columns[DateKey]"
+                          name="DateKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">DateKey</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Match Output].Columns[FullDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Match Output].Columns[FullDate]"
+                          name="FullDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">FullDate</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Load Temporal Dimensions\Load Currency\Lookup.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Load Temporal Dimensions\Load Currency\Lookup.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load Temporal Dimensions\Load Currency.Paths[Flat File Source Output]"
+                  endId="Package\Load Temporal Dimensions\Load Currency\Lookup.Inputs[Lookup Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Load Temporal Dimensions\Load Currency\CSV Currency.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Load Temporal Dimensions\Load Currency.Paths[Lookup Match Output]"
+                  endId="Package\Load Temporal Dimensions\Load Currency\Currency Load.Inputs[OLE DB Destination Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Load Temporal Dimensions\Load Currency\Lookup.Outputs[Lookup Match Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Load Temporal Dimensions\Load DimDate"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:DelayValidation="True"
@@ -34526,8 +35461,8 @@ where [refTable].[CountryID] = ?</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{FC9B5187-1501-4837-BF77-E97A454A1D4B}"
-          DTS:ObjectName="{FC9B5187-1501-4837-BF77-E97A454A1D4B}"
+          DTS:DTSID="{6EBC27E5-F546-4A28-AC50-1EC0DB3D595A}"
+          DTS:ObjectName="{6EBC27E5-F546-4A28-AC50-1EC0DB3D595A}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::StgFilename" />
       </DTS:ForEachVariableMappings>
@@ -34843,52 +35778,56 @@ where [refTable].[CountryID] = ?</property>
         <NodeLayout
           Size="159,42"
           Id="Package\Load Temporal Dimensions\Check Dim Date"
-          TopLeft="21.0000000000005,10.2222222222222" />
+          TopLeft="21.0000000000005,9.11111111111109" />
         <EdgeLayout
           Id="Package\Load Temporal Dimensions.PrecedenceConstraints[Restrição]"
-          TopLeft="104.222222222222,52.2222222222222">
+          TopLeft="104.222222222222,51.1111111111111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.777777777778"
+              EndConnector="0,53.8888888888891"
               Start="0,0"
-              End="0,45.277777777778">
+              End="0,46.3888888888891">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.277777777778" />
+                    End="0,46.3888888888891" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8,14.638888888889,16,16"
+              BoundingBox="-8,15.1944444444446,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load Temporal Dimensions\Load Currency"
+          TopLeft="229.111111111111,104.777777777778" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="379,209"
-          Size="379,252"
+          PanelSize="458,208"
+          Size="458,251"
           Id="Package\Load Temporal Dimensions"
-          TopLeft="988.888888888889,408.888888888889" />
+          TopLeft="950,383.333333333333" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 3]"
-          TopLeft="1178.13888888889,310">
+          TopLeft="1178.44444444444,310">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,98.8888888888889"
+              EndConnector="0,73.3333333333333"
               Start="0,0"
-              End="0,91.3888888888889">
+              End="0,65.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91.3888888888889" />
+                    End="0,65.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -34908,7 +35847,7 @@ where [refTable].[CountryID] = ?</property>
         <NodeLayout
           Size="130,42"
           Id="Package\Load Staging Area\Products\Sort 7"
-          TopLeft="1077,127" />
+          TopLeft="1070,129" />
         <NodeLayout
           Size="263,42"
           Id="Package\Load Staging Area\Products\Products_PlusOrders Staging Table 1"
@@ -35043,30 +35982,30 @@ where [refTable].[CountryID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Staging Area\Products.Paths[Sort Output1]"
-          TopLeft="1142,169">
+          TopLeft="1135,171">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-85.6666666666667,132"
+              EndConnector="-78.6666666666667,130"
               Start="0,0"
-              End="-85.6666666666667,124.5">
+              End="-78.6666666666667,122.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,74.3175487465181" />
+                    End="0,73.1309192200557" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,74.3175487465181"
-                    Point2="0,78.3175487465181"
-                    Point3="-4,78.3175487465181" />
+                    Point1="0,73.1309192200557"
+                    Point2="0,77.1309192200557"
+                    Point3="-4,77.1309192200557" />
                   <mssgle:LineSegment
-                    End="-81.6666666666667,78.3175487465181" />
+                    End="-74.6666666666667,77.1309192200557" />
                   <mssgle:CubicBezierSegment
-                    Point1="-81.6666666666667,78.3175487465181"
-                    Point2="-85.6666666666667,78.3175487465181"
-                    Point3="-85.6666666666667,82.3175487465181" />
+                    Point1="-74.6666666666667,77.1309192200557"
+                    Point2="-78.6666666666667,77.1309192200557"
+                    Point3="-78.6666666666667,81.1309192200557" />
                   <mssgle:LineSegment
-                    End="-85.6666666666667,124.5" />
+                    End="-78.6666666666667,122.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -35103,26 +36042,26 @@ where [refTable].[CountryID] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="37.5,53"
+              EndConnector="30.5,55"
               Start="0,0"
-              End="37.5,45.5">
+              End="30.5,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.5" />
+                    End="0,23.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
                   <mssgle:LineSegment
-                    End="33.5,26.5" />
+                    End="26.5,27.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="33.5,26.5"
-                    Point2="37.5,26.5"
-                    Point3="37.5,30.5" />
+                    Point1="26.5,27.5"
+                    Point2="30.5,27.5"
+                    Point3="30.5,31.5" />
                   <mssgle:LineSegment
-                    End="37.5,45.5" />
+                    End="30.5,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -38765,6 +39704,108 @@ where [refTable].[CountryID] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load Temporal Dimensions\Load Currency">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Load Temporal Dimensions\Load Currency\CSV Currency"
+          TopLeft="142,39" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load Temporal Dimensions\Load Currency\Currency Load"
+          TopLeft="134,248" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Load Temporal Dimensions\Load Currency\Lookup"
+          TopLeft="159,118" />
+        <EdgeLayout
+          Id="Package\Load Temporal Dimensions\Load Currency.Paths[Flat File Source Output]"
+          TopLeft="216.5,81">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Temporal Dimensions\Load Currency.Paths[Lookup Match Output]"
+          TopLeft="213,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,34.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Temporal Dimensions\Load Currency\Currency Load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Temporal Dimensions\Load Currency\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

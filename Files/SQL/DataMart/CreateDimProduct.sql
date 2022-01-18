@@ -15,6 +15,8 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimProduct')
         [BoxWidth] [float] NULL,
         [BoxVolWeight] [float] NULL,
         [Location] [nvarchar](255) NULL,
+		[BeginDate] [datetime] not null,
+		[EndDate] [datetime] not null,
 	 CONSTRAINT [PK_DimProduct] PRIMARY KEY CLUSTERED 
 	(
 		[ProductKey] ASC

@@ -7,7 +7,9 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCustomer')
 		[GeographicRegion] [int] NULL,
 		[Language] [nvarchar](2) NULL,
 		[VipCustomer] [bit] NULL,
-        [SystemID] [INT] NULL
+        [SystemID] [INT] NULL,
+		[BeginDate]  [datetime] NOT NULL,
+		[EndDate]  [datetime] NOT NULL,
 	 CONSTRAINT [PK_DimCustomer] PRIMARY KEY CLUSTERED 
 	(
 		[CustomerKey] ASC

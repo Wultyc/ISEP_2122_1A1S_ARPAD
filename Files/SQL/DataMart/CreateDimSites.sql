@@ -16,7 +16,9 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimSites')
         [Phone] [bigint] NULL,
         [PickupHour] [int] NULL,
         [DailyPickup] [bit] NULL,
-        [TimeZone] [nvarchar](255) NULL
+        [TimeZone] [nvarchar](255) NULL,
+		[BeginDate]  [datetime] NOT NULL,
+		[EndDate]  [datetime] NOT NULL,
 	 CONSTRAINT [PK_DimSites] PRIMARY KEY CLUSTERED 
 	(
 		[SitesKey] ASC

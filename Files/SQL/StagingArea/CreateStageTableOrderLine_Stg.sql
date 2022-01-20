@@ -12,6 +12,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'OrderLine_Stg')
 	[Currency] [nvarchar](3) NULL,
 	[SalePercentage] [int] NULL,
 	[Discount] [money] NULL,
-    [SystemID] [nvarchar] (15) NULL
+    [SystemID] [nvarchar] (15) NULL,
+	[CreatedAt] [datetime] null
 	)
 TRUNCATE TABLE OrderLine_Stg    

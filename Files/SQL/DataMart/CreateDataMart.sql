@@ -123,7 +123,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCurrency')
         [BoxVolWeight] [float] NULL,
         [Location] [nvarchar](255) NULL,
 		[BeginDate] [datetime] not null,
-		[EndDate] [datetime] not null,
+		[EndDate] [datetime] null,
 	 CONSTRAINT [PK_DimProduct] PRIMARY KEY CLUSTERED 
 	(
 		[ProductKey] ASC
@@ -149,7 +149,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCurrency')
         [DailyPickup] [bit] NULL,
         [TimeZone] [nvarchar](255) NULL,
 		[BeginDate]  [datetime] NOT NULL,
-		[EndDate]  [datetime] NOT NULL,
+		[EndDate]  [datetime] NULL,
 	 CONSTRAINT [PK_DimSites] PRIMARY KEY CLUSTERED 
 	(
 		[SitesKey] ASC
@@ -158,13 +158,13 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCurrency')
 	IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimShipping')	
 	CREATE TABLE [dbo].[DimShipping](
 		[ShippingKey] [int] IDENTITY(1,1) NOT NULL,
-		[Address] [datetime] NOT NULL,
-		[City] [nvarchar] (100) NOT NULL,
+		[OrderId] [int] NOT NULL,
+		[Address] [nvarchar] (255) NOT NULL,
 		[State] [nvarchar] (100) NOT NULL,
-		[Zip] [nvarchar] (100) NOT NULL,
+		[Zip_City] [nvarchar] (100) NOT NULL,
 		[Country] [nvarchar] (100) NOT NULL,
 		[BeginDate]  [datetime] NOT NULL,
-		[EndDate]  [datetime] NOT NULL,
+		[EndDate]  [datetime] NULL,
 	 CONSTRAINT [PK_DimShipping] PRIMARY KEY CLUSTERED
 	(
 		[ShippingKey] ASC
@@ -189,7 +189,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCurrency')
 		[Language] [nvarchar](2) NULL,
 		[VipCustomer] [bit] NULL,
 		[BeginDate]  [datetime] NOT NULL,
-		[EndDate]  [datetime] NOT NULL,
+		[EndDate]  [datetime] NULL,
 	 CONSTRAINT [PK_DimCustomer] PRIMARY KEY CLUSTERED 
 	(
 		[CustomerKey] ASC

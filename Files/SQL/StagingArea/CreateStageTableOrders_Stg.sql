@@ -12,7 +12,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'Orders_Stg')
 	[CountryCode] [nvarchar](2) NULL,
 	[State] [nvarchar](255) NULL,
 	[Zip_City] [nvarchar](255) NULL,
-	[Currency] [nvarchar](3) NULL,
-    [SystemID] [int] NULL
+	[Currency] [nvarchar](3) NULL
 	)
 TRUNCATE TABLE Orders_Stg     

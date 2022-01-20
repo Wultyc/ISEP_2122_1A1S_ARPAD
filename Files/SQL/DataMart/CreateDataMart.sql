@@ -212,7 +212,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCurrency')
 		[VatPercentage] [float]NOT NULL,
 		[SalePercentage] [float]NOT NULL,
 		[Discount] [money]NOT NULL,
-		[PromotionDiscount] [money]NOT NULL,
 		[PromotionPercentage] [float]NOT NULL,
 		[TotalShipping] [money]NOT NULL,
 		[TotalWithoutShipping] [money]NOT NULL,

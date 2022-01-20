@@ -12,7 +12,6 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'OrderLine_MoreOrders')
     [VATPercentage] [int] NULL,
 	[Currency] [nvarchar](3) NULL,
 	[SalePercentage] [int] NULL,
-	[Discount] [money] NULL,
-	[PromotionDiscount] [money] NULL
+	[Discount] [money] NULL
 	)
 TRUNCATE TABLE OrderLine_MoreOrders    

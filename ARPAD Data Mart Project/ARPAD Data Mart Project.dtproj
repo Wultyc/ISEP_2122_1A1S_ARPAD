@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">JORGE-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb63gZhZ95kim4ePFxB+4awAAAAACAAAAAAAQZgAAAAEAACAAAABtKXd4oBWl7g28Zm+Fsc7IF4ODXFF2p3hbrowp3GiVcwAAAAAOgAAAAAIAACAAAABLbcBEsg3m7bR5ES33ef8UrGk/3yvv5W6u9/1zWmtiWpAAAAANz9mdxsb5FWiIznR1RpZUGQ5Zdo7Ok9XrZ0QqMwnewhf2uOEnAjZj5hPomqZick1rgJqTZWTHONvq4n4TCKdpYPte3tCAA11WMe+xJKx9i7BluhevN3CMzhrZ3tpjyhenuYC+3go/xyA2Nycwg7USKay6UL/9eOXVgY8m5B3iBQHbhY7E4BNgvZLwHtoSTCpAAAAAM5Z3hgJyfSNCZmRdeiq2uZ1U9xHLwMo7EejklJUAQlT8OKSMDkq4pvxPY6uN40XgKuxbHrUAKgyHunB9qtl0DA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAb63gZhZ95kim4ePFxB+4awAAAAACAAAAAAAQZgAAAAEAACAAAAAR2ozCAC5iFxiy242DVWR9RQsvFK1NGzwL/4COgBK4sAAAAAAOgAAAAAIAACAAAACHR6XwAI1jHfxB/iPneygCj4/Qa1yD52x2aZEsOzjvEpAAAADMcVwxdYuwXn5Lc9+sXF4loWe2lvc4gRYZ+nCpTK2cuW0srhFZeIec1j78nx2iTWnxV4k1FldTDqeXYBH0PnK2l1X0RntBubTgnk0jmLlIg3URsZjy9PtP/AogY79JBlwM3lpVJZTN2hu02/Gre1BwFKyuJL64fnHYve3hvwvwsNSrDOuJkdvpGrWFh3j3B81AAAAAvq7X6Atyy3SCysVh8HfmzzGIR7at3CBY505t+EW4ymLXmJbpD9bHQMWETamekjFl3wQMjcc+ejriEtt7Ju0Jcg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">202</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">222</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{72AE1751-A5AC-47AE-9758-29F934FFF601}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6A509E2D-495D-4400-B64C-422A09B5C5CE}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -140,21 +140,6 @@
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.CSV Dim Currency.ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\ARPAD\arpad_1161042_1160929\Files\Excel\DimCurrency.csv</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.CSV Dim Currency.DataRowsToSkip">
@@ -474,21 +459,6 @@
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.DataMart.ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">D:\ARPAD\arpad_1161042_1160929\Files\SQL\DataMart</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.localhost.master.ConnectByProxy">

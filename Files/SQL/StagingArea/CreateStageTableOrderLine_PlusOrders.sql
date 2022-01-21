@@ -9,9 +9,9 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'OrderLine_PlusOrders')
 	[SizeID] [int] NULL,
 	[LineTotal] [money] NULL,
 	[PromotionPercentage] [float] NULL,
-    [VATPercentage] [int] NULL,
+    [VATPercentage] [float] NULL,
 	[Currency] [nvarchar](3) NULL,
-	[SalePercentage] [int] NULL,
+	[SalePercentage] [float] NULL,
 	[Discount] [money] NULL,
 	[CreatedAt] [datetime] null
 	)

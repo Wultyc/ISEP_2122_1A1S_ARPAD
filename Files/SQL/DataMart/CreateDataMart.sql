@@ -1,3 +1,29 @@
+	IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'FactTable_DQP')	
+	CREATE TABLE [dbo].FactTable_DQP(
+		[OrderLinesKey] [int]  NULL,
+		[SystemKey] [int]  NULL,
+		[CustomerKey] [int]  NULL,
+		[ProductKey] [int]  NULL,
+		[CreateDateKey] [int]  NULL,
+		[SiteKey] [int]  NULL,
+		[SizeKey] [int]  NULL,
+		[ShippingKey] [int]  NULL,
+		[OrderId] [int] NULL,
+		[OrderLineId] [int] NULL,
+		[Quantity] [int] NULL,
+		[LineTotal] [money] NULL,
+		[VatPercentage] [float] NULL,
+		[SalePercentage] [float] NULL,
+		[Discount] [money] NULL,
+		[PromotionPercentage] [float] NULL,
+		[TotalShipping] [money] NULL,
+		[TotalWithoutShipping] [money] NULL,
+		[ShippingCost] [money] NULL,
+		[TotalShippingEUR] [money] NULL,
+		[TotalWithoutShippingEUR] [money] NULL,
+		[ShippingCostEUR] [money] NULL,
+		[DQP] [nvarchar] (255) NULL
+		)
 IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimDate')	
 	CREATE TABLE [dbo].[DimDate](
 		[DateKey] [int] IDENTITY(1,1) NOT NULL,
@@ -255,3 +281,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCurrency')
         REFERENCES [DimShipping] (ShippingKey)
         ON DELETE CASCADE
 	) ON [PRIMARY]
+INSERT INTO [ProjectDataMart].[dbo].[DimSystem] (Name)
+VALUES ('MoreOrders');
+INSERT INTO [ProjectDataMart].[dbo].[DimSystem] (Name)
+VALUES ('PlusOrders');

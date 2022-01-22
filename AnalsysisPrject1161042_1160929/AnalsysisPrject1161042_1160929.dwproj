@@ -24,10 +24,6 @@
       <FullPath>Dim Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Shipping.dim</Name>
-      <FullPath>Dim Shipping.dim</FullPath>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Dim Sites.dim</Name>
       <FullPath>Dim Sites.dim</FullPath>
     </ProjectItem>
@@ -46,6 +42,10 @@
     <ProjectItem>
       <Name>Dim System.dim</Name>
       <FullPath>Dim System.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Shipping.dim</Name>
+      <FullPath>Dim Shipping.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>

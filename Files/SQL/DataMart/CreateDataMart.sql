@@ -189,6 +189,7 @@ IF NOT EXISTS (SELECT name FROM sys.tables WHERE name = 'DimCurrency')
 		[State] [nvarchar] (100) NOT NULL,
 		[Zip_City] [nvarchar] (100) NOT NULL,
 		[Country] [nvarchar] (100) NOT NULL,
+		[Currency] [nvarchar](3) Not NULL,
 		[BeginDate]  [datetime] NOT NULL,
 		[EndDate]  [datetime] NULL,
 	 CONSTRAINT [PK_DimShipping] PRIMARY KEY CLUSTERED
